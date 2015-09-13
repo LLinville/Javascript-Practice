@@ -286,10 +286,12 @@
 			try {
 				var myStudent = student("Bill", 3, 3.5, 30);
 				if (!(myStudent.name === "Bill" && myStudent.gradeLevel == 3 && myStudent.gpa == 3.5 && myStudent.creditHours == 30))
-					throw 101;
+					console.log("wrong first object");
 				myStudent.addSemesterGPA(2.0, 15);
-				if (!(myStudent.gpa == 3.0 && myStudent.creditHours == 45))
-					throw 102;
+				if (!(myStudent.gpa == 3.0 && myStudent.creditHours == 45)){
+					console.log("wrong second object");
+					console.log(myStudent.gpa);
+				}
 				document.write("<font color='green'>Test Passed</font>");		
 			} catch (err) {
 				document.write("<font color='red'>Test Failed</font>");
